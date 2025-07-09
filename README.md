@@ -30,6 +30,12 @@ This project was built under the assignment given by **Sharp Stakes**.
 
 ---
 
+---
+
+## API is live at : http://ec2-65-0-107-176.ap-south-1.compute.amazonaws.com/api/auth
+
+---
+
 ## 📦 Prerequisites
 
 * Docker & Docker Compose (optional)
