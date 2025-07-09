@@ -176,9 +176,6 @@ curl -X POST http://localhost:8000/api/auth/verify/ \
 
 Use the following test user to quickly verify your setup:
 
-* **Username:** `TestUser`
-* **Password:** `12345678`
-
 * **Username:** `TestUser1`
 * **Password:** `12345678`
 
