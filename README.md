@@ -89,12 +89,10 @@ http://<your-host>:8000/api/auth/
 ### 1. Login
 
 ```bash
-curl -X POST http://localhost:8000/api/auth/login/ \
-     -H 'Content-Type: application/json' \
-     -d '{
-       "username": "admin",
-       "password": "adminpass"
-     }'
+ curl -X POST \
+  http://ec2-65-0-107-176.ap-south-1.compute.amazonaws.com/api/auth/login/ \
+  -H "Content-Type: application/json" \
+  -d '{"username":"TestUser","password":"12345678"}'
 ```
 
 **Response:**
@@ -111,7 +109,7 @@ curl -X POST http://localhost:8000/api/auth/login/ \
 ### 2. Refresh Token
 
 ```bash
-curl -X POST http://localhost:8000/api/auth/refresh/ \
+curl -X POST http://ec2-65-0-107-176.ap-south-1.compute.amazonaws.com/api/auth/refresh/ \
      -H 'Content-Type: application/json' \
      -d '{
        "refresh": "<your_refresh_token>"
@@ -132,7 +130,7 @@ curl -X POST http://localhost:8000/api/auth/refresh/ \
 ### 3. Validate Access Token
 
 ```bash
-curl -X GET http://localhost:8000/api/auth/validate/ \
+curl -X GET http://ec2-65-0-107-176.ap-south-1.compute.amazonaws.com/api/auth/validate/ \
      -H 'Authorization: Bearer <your_access_token>'
 ```
 
@@ -151,7 +149,7 @@ curl -X GET http://localhost:8000/api/auth/validate/ \
 ### 4. Verify Any Token
 
 ```bash
-curl -X POST http://localhost:8000/api/auth/verify/ \
+curl -X POST http://ec2-65-0-107-176.ap-south-1.compute.amazonaws.com/api/auth/verify/ \
      -H 'Content-Type: application/json' \
      -d '{
        "token": "<any_jwt_token>"
@@ -180,10 +178,10 @@ Use the following test user to quickly verify your setup:
 * **Password:** `12345678`
 
 ```bash
-curl -X POST http://localhost:8000/api/auth/login/ \
+curl -X POST http://ec2-65-0-107-176.ap-south-1.compute.amazonaws.com/api/auth/login/ \
      -H 'Content-Type: application/json' \
      -d '{
-       "username": "TestUser",
+       "username": "TestUser1",
        "password": "12345678"
      }'
 ```
